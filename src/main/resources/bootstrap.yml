@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: ${TERMINAL_APP:colony}

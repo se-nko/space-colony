@@ -1,0 +1,12 @@
+server:
+  port: 9053
+spring:
+  profiles:
+    active: ${COLONY_PROFILE:dev}
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://localhost:9051}
+  cloud:
+    config:
+      label: ${COLONY_LABEL:colony}
+      username: ${SERVER_USER:pet}
+      password: ${SERVER_PASS:pass}
